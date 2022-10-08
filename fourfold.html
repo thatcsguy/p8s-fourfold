@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fourfold Fires</title>
+    <style>
+        body {
+            background-color: #000c2e
+        }
+        .wrap {
+            width: 100%;
+            text-align: center;
+        }
+        .content {
+            width:800px;
+            margin:auto;
+            position: relative;
+        }
+        .arena {
+            width: 800px;
+        }
+        .fire {
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 400px;
+            left: 400px;
+            display:none;
+        }
+        .fireNE {
+            left:600px;
+            top:200px;
+        }
+        .fireNW {
+            left:200px;
+            top:200px;
+        }
+        .fireSW {
+            left:200px;
+            top:600px;
+        }
+        .fireSE {
+            left:600px;
+            top:600px;
+        }
+        .player {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            border: 3px solid black;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: x-large;
+            position: absolute;
+            top: 570px;
+            left: 570px;
+            display:none;
+        }
+        .tank {
+            background-color: blue;
+        }
+        .healer {
+            background-color: green;
+        }
+        .dps {
+            background-color: red;
+        }
+        button {
+            position:absolute;
+            transform: translate(-50%, -50%);
+            top:400px;
+            left:400px;
+        }
+        .answer {
+            display:none;
+        }
+        .cast {
+            color:white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 330px;
+            left: 400px;
+            font-size: xxx-large;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+        <div class="content">
+            <img class='arena' src="https://i.imgur.com/kA2bnnX.png"/>
+            <div class='fire fireNE'></div>
+            <div class='fire fireNW'></div>
+            <div class='fire fireSE'></div>
+            <div class='fire fireSW'></div>
+            <div class='player dps m1'>M1</div>
+            <div class='player dps m2'>M2</div>
+            <div class='player dps r1'>R1</div>
+            <div class='player dps r2'>R2</div>
+            <div class='player tank t1'>T1</div>
+            <div class='player tank t2'>T2</div>
+            <div class='player healer h1'>H1</div>
+            <div class='player healer h2'>H2</div>
+            <div class='cast'></div>
+            <button class='next'>Next Round</button>
+            <button class='answer'>Show Answer</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="fourfold.js"></script>
+  </body>
+</html>
